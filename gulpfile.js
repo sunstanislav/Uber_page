@@ -6,14 +6,12 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const image = require('gulp-image');
 const htmlmin = require('gulp-htmlmin');
-// const deploy = require("gulp-gh-pages");
+
 const ghPages = require('gulp-gh-pages');
-/**
- * Push build to gh-pages
- */
+
 gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+        .pipe(ghPages());
 });
 
 gulp.task('server', function() {
